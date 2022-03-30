@@ -1,66 +1,66 @@
 // pages/home/home.js
+const app = getApp()
+console.log(app.globaData.name);
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    list:[]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  // ---------------1.监听页面的生命周期函数-------------
+
+  //页面被加载出来
+  onLoad(){
+    console.log('onload');
+   this.getRequest()
+  },
+  getRequest(){
+    var that = this;
+    wx.request({
+      url: 'http://api.jisuapi.com/news/get?channel=%E5%A4%B4%E6%9D%A1&start=0&num=10&appkey=28484dd6dafeebd7',
+      success (res) {
+        console.log(res);
+        const data  = res.data.result.list;
+        that.setData({
+          list:data
+        })
+      }
+    })
+  },
+  // 页面显示出来
+  onShow(){
+    console.log('onShow');
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  // 页面初次渲染完成时触发
+  onReady(){
+    console.log('onReady');
+  },
+  // 页面隐藏/切入后台时触发
+  onHide(){
+    console.log('onHide');
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  // 页面卸载时触发
+  onUnload(){
+    console.log('onUnload');
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleGetUserInfo:function (event) {
+    console.log(event);
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleViewClick(){
+    console.log('hahahah被点击')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  //监听页面滚动
+  onPageScroll(obj){
+    // console.log(obj);
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  // 监听页面滚动到底部
+  onReachBottom(){
+    console.log('页面滚动到底部');
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPullDownRefresh(){
+    console.log('下拉刷新的事件');
   }
 })
