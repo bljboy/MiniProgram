@@ -1,0 +1,25 @@
+<!-- image组件可以写成单标签，也可以修成双标签 -->
+<!-- 320*240 -->
+<!-- image组件是一个行内块级元素(inline-block) -->
+<!-- <image></image>
+<text>haha </text> -->
+
+<!-- src：本地路径(相对路径、绝对路径)、远程地址 -->
+<image src="../../assets/demo.jpg"></image>
+<image src="/assets/demo.jpg"></image>
+<image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F915%2F2708a15c89046d9322f6638d5331bd43.png&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651213067&t=c08e0f13f9e008b17f99fb612e3e339f"></image>
+
+<!-- 补充 :显示相册中的图片-->
+<button bindtap="handleChooes">选中</button>
+<image src="{{imagePath}}"></image>
+
+<!-- bindload 监听图片加载完成 -->
+<!-- lazy-load 图片的懒加载 -->
+<view>-------------------------</view>
+<image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F915%2F2708a15c89046d9322f6638d5331bd43.png&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651213067&t=c08e0f13f9e008b17f99fb612e3e339f" bindload="hadnleImageLoad" wx:for="{{1}}" lazy-load>
+</image>
+
+<!-- show-menu-by-longpress:长按图片出现识别小程序码 -->
+<image show-menu-by-longpress
+src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F915%2F2708a15c89046d9322f6638d5331bd43.png&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651213067&t=c08e0f13f9e008b17f99fb612e3e339f"
+></image>

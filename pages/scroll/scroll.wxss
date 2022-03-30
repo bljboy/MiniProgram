@@ -1,0 +1,22 @@
+.item1{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: red;
+  display: inline-block;
+  
+}
+.container1{
+  background: gold;
+  white-space: nowrap;
+}
+.container2{
+  background: hotpink;
+  height: 200px;
+  margin-top: 20px;
+}
+.item2{
+  height: 100px;
+  background: grey;
+  margin: 10px;
+}

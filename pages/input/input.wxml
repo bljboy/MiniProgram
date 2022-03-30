@@ -1,0 +1,15 @@
+<input value="哈哈哈"/>
+
+<!-- type:键盘类型 -->
+<!-- <input type="number"/> -->
+<!-- password 暗文 -->
+<input password/>
+
+<!-- placeholder 占位文字 -->
+<input placeholder="请输入用户名"/>
+
+<!-- input绑定事件 -->
+<input bindinput="handleInput"
+      bindfocus="handleFocus"
+      bindblur="handleBlur"
+/>
