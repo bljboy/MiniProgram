@@ -1,0 +1,18 @@
+<!--pages/button/button.wxml-->
+<button>按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+
+<!-- type属性 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<button bindtap="getUserProfile" open-type="getUserInfo">获取</button>
+<!-- plain：镂空效果 -->
+<button plain size="mini">按钮</button>
+<!-- disable：不可用 -->
+<button size="mini" disabled>按钮</button>
+<!-- loading -->
+<button size="mini" loading="{{isloading}}">按钮</button>
+<!-- hover-class -->
+<button hover-class="pressd">按钮</button>
