@@ -1,0 +1,22 @@
+@import './sytle/text.wxss';
+@import './sytle/box.wxss';
+.box{
+  font-size: 32px;
+  color: green;
+}
+/* .box1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.box2{
+  width: 200rpx;
+  height: 200rpx;
+  background: orchid;
+} */
+/* .text{
+  font-size: 32px;
+}
+.text1{
+  font-size: 32rpx;
+} */

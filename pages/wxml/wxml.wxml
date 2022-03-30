@@ -1,0 +1,43 @@
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname+' '+lastname}}</view>
+<view>{{nowTime}}</view>
+<button bindtap="handleSetColors">切换</button>
+<view class='box {{isAction ? "active" : ""}}'>哈哈昂</view>
+<button bindtap="handleSwitchShow">切换显示</button>
+<view wx:if='{{isShow}}'>哈123哈哈</view>
+<!-- wx:if和hidden隐藏的区别 -->
+<!-- hidden:将一个组件隐藏起来时，组件依然存在(display:none) -->
+<!-- wx:if 隐藏组件 该组件压根不存在 -->
+<!-- 频率使用非常高使用hidden -->
+<!-- 频率使用非常低使用wx:if -->
+
+<!-- wx:for -->
+<!-- <view wx:for="{{['a','b','c']}}">{{item}}</view>
+<view wx:for="{{['a','b','c']}}">{{item}} {{index}}</view>
+<view wx:for="{{9}}">{{item}}</view>
+<view wx:for="bao">{{item}}</view> -->
+
+<!-- block标签不进行渲染，只接受控制属性，将要遍历的内容进行包裹，性能更高 -->
+<!-- <block></block> -->
+
+<!-- item\index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="movie">{{movie}}</view>
+<view wx:for="{{movies}}" wx:for-index="d">{{item}}{{d}}</view>
+
+<!-- 模板中包裹的内容，在没有被使用前，是不会进行任何渲染的 template-->
+<!-- include是不能导入模板 -->
+<!-- 
+  关于wxml的导入有两种方式：
+  import导入：
+        1.主要是导入template
+        2.特点：不能进行递归导入
+  include引入：
+        1.将公共的wxml中的组件抽取到一个文件中
+        2.特点：不能导入template/wxs，可以进行递归导入
+ -->
+<template name="contentItem">
+<button>{{btnText}}</button>
+<view>{{title}}</view>
+</template>
+<template is="contentItem" data="{{btnText:'fsafsa',title:'fsfsfs'}}"></template>

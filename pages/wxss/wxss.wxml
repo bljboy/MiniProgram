@@ -1,0 +1,14 @@
+<!-- 行内样式：内联 -->
+<view style="font-size: 32px;color: red;">哈哈航安</view>
+<!-- 页内样式 -->
+<view class="box">哈哈航安</view>
+<!-- 全局样式 -->
+<view class="container">哈哈航安</view>
+<!-- 三种样式作用于同一个组件 -->
+<!-- 优先级：行内样式 > 页内样式 > 全局样式 -->
+<view>哈哈航安</view>
+<!-- wxss中的单位：rpx -->
+<view class="box1"></view>
+<view class="box2"></view>
+<view class="text">哈哈哈</view>
+<view class="text1">喝喝喝</view>
