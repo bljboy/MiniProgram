@@ -1,2 +1,26 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<button size="mini" bindtap="handleBtnClick">按钮</button>
+<button size="mini" bind:tap="handleBtnClick">按钮</button>
+<button size="mini" catch:tap="handleBtnClick">按钮</button>
+
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<view class="content" >ssssss</view>
+<my-event bind:increment="handleIncrement"></my-event>
+<view class="tab-border">当前计数：{{counter}}</view>
+
+<my-tab-control titles="{{['衣服','裤子','鞋子']}}" bind:TabItemClick="handleTabClick"/>
+
+<my-sel bindtap="handleIncrementCpn" class="sel-class"/>
+
+
+<my-slot>
+<text>123</text>
+</my-slot>
+<my-slot>
+<image src="https://img1.baidu.com/it/u=147756509,42215431&fm=253&fmt=auto&app=120&f=JPEG?w=801&h=800"></image>
+</my-slot>
+
+<my-mslot>
+<view slot="slot2">12345</view>
+<view slot="slot1">565</view>
+</my-mslot>

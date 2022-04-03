@@ -1,0 +1,2 @@
+<view >当前计数:{{counter}}</view>
+<button bind:tap="incrementCounter">my-sel</button>

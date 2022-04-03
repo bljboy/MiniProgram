@@ -1,0 +1,3 @@
+<view class="slot1">我是说mslot头部<slot name="slot1"></slot></view>
+<view class="slot2"><slot name="slot2"></slot></view>
+<view class="slot3">我是说mslot尾部<slot name="slot3"></slot></view>
