@@ -1,66 +1,65 @@
-// pages/about/about.js
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  handleShowModal() {
+    wx.showModal({
+      title: "标题",
+      duration: 3000,
+      content: "我是内容，哈昂哈",
+      // showCancel:false,
+      cancelText: "退出",
+      success(res) {
+        console.log(res);
+        if (res.cancel) {
+          console.log("取消按钮");
+        }
+        if (res.confirm) {
+          console.log("确定按钮");
+        }
+      },
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowToast() {
+    wx.showToast({
+      title: '点击了',
+      duration: 5000,
+      icon: "",
+      mask: true,
+      success() {
+        console.log("弹窗成功")
+      },
+      fail() {
+        console.log("弹窗失败");
+      },
+      complete() {
+        console.log("完成函数的调用");
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleLoading() {
+    wx.showLoading({
+      title: '加载ing',
+      mask: true
+    }),
+      setTimeout(() => {
+        // 必须手动hideLoading才会让loading消失
+        wx.hideLoading()
+      }, 1000);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleShowAction() {
+    wx.showActionSheet({
+      itemList: ['相册', '拍照'],
+      success() {
+        console.log(res);
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleShareAppMessage(options){
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage:function (params) {
+    return {
+      title:"你好啊",
+      path:"/pages/about/about",
+      imageUrl:"https://img1.baidu.com/it/u=147756509,42215431&fm=253&fmt=auto&app=120&f=JPEG?w=801&h=800"
+    }
   }
 })
