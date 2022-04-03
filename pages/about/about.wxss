@@ -1,5 +1,5 @@
 /* pages/about/about.wxss */
 .title{
   color:red;
-  font-size: 100px;
+  font-size: 50rpx;
 }

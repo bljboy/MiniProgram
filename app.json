@@ -1,6 +1,18 @@
 {
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/about/about",
+      "text": "关于"
+    }]
+  },
   "pages": [
+    "pages/home/home",
     "pages/about/about",
-    "pages/home/home"
-  ]
+    "pages/detail/detail",
+    "pages/comment/comment"
+  ],
+  "sitemapLocation": "sitemap.json"
 }
